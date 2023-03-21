@@ -8,10 +8,53 @@
 Рабочий Dockerfile, docker-compose.yaml и текстовый документ с заметками выложить в свой репозиторий github.
 
 #### Ответ
-Было запущено приложение Flaskex, вышла ошибка. Отправился искать на гитхаб приложения. в разделе "Issues" нашел причину ошибки и ее исправление. 
-Закоммитил ветку с исправлением на локальный репозиторий. 
-Установил виртуальное окружение питона python3 -m venv .venv; source .venv/bin/activate
-Далее установил зависимости pip install -r requirements.txt
-Запустил приложение python3 app.py
+1. Для запуска приложения нужно клонировать репозиторий git clone https://github.com/anfederico/Flaskex
 
-Dockerfile и docker-compose.yaml запушил в репу Github
+
+2. Было запущено приложение Flaskex, вышла ошибка :  
+
+
+3. Отправился искать на гитхаб приложения. в разделе "Issues" нашел причину ошибки и ее исправление. 
+Закоммитил ветку с исправлением на локальный репозиторий. 
+
+
+4. Создал и активировал виртуальное окружение: 
+
+ `python3 -m venv .venv`
+
+ `source .venv/bin/activate`
+
+
+5. Далее установил зависимости: 
+
+`pip install -r requirements.txt`
+
+
+6. Запустил приложение: 
+
+ `python3 app.py`  
+
+7. Написал Dockerfile
+
+
+8. Собрал имедж:
+
+ `docker build -t flaskex:test .`
+
+9. Запустил:
+
+ `docker run --rm -p 5000:5000 flaskex:test`
+
+
+
+10. Написал docker-compose.yaml
+
+ 
+
+11. Собрал имедж:
+
+ `docker-compose build`
+
+12. Запустил:
+
+ `docker-compose up -d`
